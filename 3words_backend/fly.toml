@@ -1,22 +1,24 @@
-# fly.toml app configuration file generated for 3words-backend-dawn-hill-2661 on 2024-01-23T23:30:24+09:00
+# fly.toml app configuration file generated for 3words-server on 2024-05-28T13:01:54+09:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = "3words-backend-dawn-hill-2661"
-primary_region = "hkg"
+app = '3words-server'
+primary_region = 'nrt'
 
 [build]
+
+[env]
+  PORT='1203'
+  MONGO_USER='jeffbukk00'
 
 [http_service]
   internal_port = 3000
   force_https = true
-  auto_stop_machines = false
+  auto_stop_machines = true
   auto_start_machines = true
   min_machines_running = 0
-  processes = ["app"]
+  processes = ['app']
 
 [[vm]]
-  cpu_kind = "shared"
-  cpus = 1
-  memory_mb = 256
+  size = 'shared-cpu-1x'
