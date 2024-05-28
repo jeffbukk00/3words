@@ -7,8 +7,8 @@ const ReadBoardReadings = (props) => {
     const { wordsProposalId, pageCloseHandler } = props;
 
     const FETCH_URL =
-        "https://3words-backend-dawn-hill-2661.fly.dev/" +
-        "read/" +
+        import.meta.env.VITE_SERVER_HOST +
+        "/read/" +
         wordsProposalId;
 
     const { fetchedData, isLoading } = useInfiniteScroll(

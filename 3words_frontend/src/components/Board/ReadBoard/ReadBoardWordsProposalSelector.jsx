@@ -10,7 +10,7 @@ const ReadBoardWordsProposalSelector = (props) => {
     } = props;
 
     const FETCH_URL =
-        "https://3words-backend-dawn-hill-2661.fly.dev/" + "wordsProposal";
+    import.meta.env.VITE_SERVER_HOST + "/wordsProposal";
 
     const { fetchedData, isLoading } = useInfiniteScroll(
         6,

@@ -41,8 +41,8 @@ const WriteBoardWriting = (props) => {
         };
 
         const response = await fetch(
-            "https://3words-backend-dawn-hill-2661.fly.dev/" +
-                "write/" +
+            import.meta.env.VITE_SERVER_HOST +
+                "/write/" +
                 wordsProposalId,
             {
                 method: "PUT",
@@ -66,8 +66,8 @@ const WriteBoardWriting = (props) => {
     const writingOpenStateHandler = async (opened) => {
         setIsLoading(true);
         const response = await fetch(
-            "https://3words-backend-dawn-hill-2661.fly.dev/" +
-                "write/state/" +
+            import.meta.env.VITE_SERVER_HOST +
+                "/write/state/" +
                 wordsProposalId,
             {
                 method: "PATCH",
@@ -86,8 +86,8 @@ const WriteBoardWriting = (props) => {
     const resetWritingHandler = async () => {
         setIsLoading(true);
         const response = await fetch(
-            "https://3words-backend-dawn-hill-2661.fly.dev/" +
-                "write/" +
+            import.meta.env.VITE_SERVER_HOST +
+                "/write/" +
                 wordsProposalId,
             {
                 method: "DELETE",
