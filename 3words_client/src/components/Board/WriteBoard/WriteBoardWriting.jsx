@@ -7,6 +7,7 @@ import WriteBoardWritingCard from "./WriteBoardWritingCard";
 import WriteBoardWritingFooter from "./WritingBoardWritingFooter";
 
 import NavBackBar from "../../Shared/UI/NavBackBar";
+import { SERVER_HOST } from "../../../consts/server";
 
 const WriteBoardWriting = (props) => {
     const { wordsProposalId, pageCloseHandler } = props;
@@ -41,7 +42,7 @@ const WriteBoardWriting = (props) => {
         };
 
         const response = await fetch(
-            import.meta.env.VITE_SERVER_HOST +
+            SERVER_HOST +
                 "/write/" +
                 wordsProposalId,
             {
@@ -66,7 +67,7 @@ const WriteBoardWriting = (props) => {
     const writingOpenStateHandler = async (opened) => {
         setIsLoading(true);
         const response = await fetch(
-            import.meta.env.VITE_SERVER_HOST +
+            SERVER_HOST +
                 "/write/state/" +
                 wordsProposalId,
             {
@@ -86,7 +87,7 @@ const WriteBoardWriting = (props) => {
     const resetWritingHandler = async () => {
         setIsLoading(true);
         const response = await fetch(
-            import.meta.env.VITE_SERVER_HOST +
+            SERVER_HOST +
                 "/write/" +
                 wordsProposalId,
             {

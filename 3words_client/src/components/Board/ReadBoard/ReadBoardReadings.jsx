@@ -2,12 +2,13 @@ import useInfiniteScroll from "../../../hook/useInfiniteScroll";
 
 import ReadBoardReading from "./ReadBoardReading";
 import NavBackBar from "../../Shared/UI/NavBackBar";
+import { SERVER_HOST } from "../../../consts/server";
 
 const ReadBoardReadings = (props) => {
     const { wordsProposalId, pageCloseHandler } = props;
 
     const FETCH_URL =
-        import.meta.env.VITE_SERVER_HOST +
+        SERVER_HOST +
         "/read/" +
         wordsProposalId;
 

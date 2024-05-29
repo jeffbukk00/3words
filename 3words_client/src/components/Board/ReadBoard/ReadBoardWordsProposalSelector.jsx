@@ -1,4 +1,5 @@
 import useInfiniteScroll from "../../../hook/useInfiniteScroll";
+import {SERVER_HOST} from "../../../consts/server"
 
 import ReadBoardWordsProposal from "./ReadBoardWordsProposal";
 
@@ -10,7 +11,7 @@ const ReadBoardWordsProposalSelector = (props) => {
     } = props;
 
     const FETCH_URL =
-    import.meta.env.VITE_SERVER_HOST + "/wordsProposal";
+    SERVER_HOST + "/wordsProposal";
 
     const { fetchedData, isLoading } = useInfiniteScroll(
         6,

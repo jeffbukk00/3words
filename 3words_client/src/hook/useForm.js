@@ -1,5 +1,6 @@
 import { useState } from "react";
 
+import { SERVER_HOST } from "../consts/server";
 import deepCopyObj from "../util/deepCopyObj";
 
 const useForm = (loginHandler) => {
@@ -41,7 +42,7 @@ const useForm = (loginHandler) => {
 
     try {
       const response = await fetch(
-        import.meta.env.VITE_SERVER_HOST +
+        SERVER_HOST +
           "/auth/" +
           `${formType === "SIGNUP" ? "signup" : "login"}`,
         {
