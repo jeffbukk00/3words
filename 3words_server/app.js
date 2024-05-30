@@ -1,8 +1,7 @@
 require("dotenv").config();
+const MONGO_URL = require("./consts/db");
 
 const mongoose = require("mongoose");
-
-const MONGO_URL = `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@3words.wwmjmmw.mongodb.net/3words?retryWrites=true&w=majority&appName=3words`;
 
 const express = require("express");
 
