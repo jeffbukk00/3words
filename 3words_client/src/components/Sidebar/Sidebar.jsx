@@ -7,7 +7,7 @@ import AuthContext from "../../store/AuthContext";
 
 const Sidebar = (props) => {
     const { mode, modeChangeHandler } = useContext(ModeContext);
-    const { isLoggedIn, logout } = useContext(AuthContext);
+    const { isLoggedIn, isAdmin, logout } = useContext(AuthContext);
 
     return (
         <aside className="sidebar">
@@ -23,6 +23,21 @@ const Sidebar = (props) => {
                 >
                     HOME
                 </button>
+                {isLoggedIn && isAdmin && (
+                    <button
+                        className={`mode-button ${
+                            mode === MODE.ADMIN
+                                ? "mode-selected"
+                                : "mode-unselected"
+                        }`}
+                        type="button"
+                        onClick={() => {
+                            modeChangeHandler(MODE.ADMIN);
+                        }}
+                    >
+                        ADMIN
+                    </button>
+                )}
                 <button
                     className={`mode-button ${
                         mode === MODE.AUTH ? "mode-selected" : "mode-unselected"

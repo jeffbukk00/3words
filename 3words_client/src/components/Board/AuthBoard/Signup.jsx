@@ -1,11 +1,11 @@
 import validator from "../../../validation/validator";
 
-import useForm from "../../../hook/useForm";
 import { useContext } from "react";
 
 import AuthContext from "../../../store/AuthContext";
 
 import Input from "../../Shared/FormElement/Input";
+import useAuthHttp from "../../../hook/useAuthHttp";
 
 const Signup = (props) => {
     const { toLoginFormHandler } = props;
@@ -17,7 +17,7 @@ const Signup = (props) => {
         formErrorMessage,
         formStateUpdateHandler,
         submitHandler,
-    } = useForm(login);
+    } = useAuthHttp(login);
 
     return (
         <section className="auth-board-container">

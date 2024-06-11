@@ -7,8 +7,10 @@ import ModeContext from "./ModeContext";
 const AuthContext = React.createContext({
     isLoggedIn: false,
     token: "",
+    isAdmin: false,
     login: () => {},
     logout: () => {},
+    adminLogin: () => {}
 });
 
 export default AuthContext;
@@ -18,6 +20,7 @@ export const AuthContextProvider = (props) => {
 
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     const [token, setToken] = useState(null);
+    const [isAdmin, setIsAdmin] = useState(false);
 
     const { modeChangeHandler } = useContext(ModeContext);
 
@@ -30,6 +33,13 @@ export const AuthContextProvider = (props) => {
 
             modeChangeHandler(MODE.HOME);
         }
+
+        const isAdmin = localStorage.getItem("isAdmin");
+
+        if (isAdmin === "admintrue") {
+            setIsAdmin(true);
+        }
+
     }, []);
 
     const login = (token) => {
@@ -43,10 +53,22 @@ export const AuthContextProvider = (props) => {
         }
     };
 
+    const adminLogin = () => {
+        localStorage.setItem("isAdmin", "admintrue")
+        setIsAdmin(true);
+    }
+
+    const adminLogout = () => {
+        localStorage.removeItem("isAdmin");
+        setIsAdmin(false);
+    }
+
     const logout = () => {
         setIsLoggedIn(false);
         localStorage.removeItem("token");
         setToken(null);
+        
+        adminLogout();
 
         modeChangeHandler(MODE.HOME);
     };
@@ -54,8 +76,10 @@ export const AuthContextProvider = (props) => {
     const value = {
         isLoggedIn,
         token,
+        isAdmin,
         login,
         logout,
+        adminLogin
     };
 
     return (

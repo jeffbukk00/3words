@@ -1,11 +1,13 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 
 import { SERVER_HOST } from "../consts/server";
 import deepCopyObj from "../util/deepCopyObj";
+import AuthContext from "../store/AuthContext";
 
-const useForm = (loginHandler) => {
+const useAuthHttp = (loginHandler) => {
   const [formState, setFormState] = useState({});
   const [formErrorMessage, setFormErrorMessage] = useState("");
+  const { adminLogin } = useContext(AuthContext);
 
   let formIsValid = false;
 
@@ -59,6 +61,9 @@ const useForm = (loginHandler) => {
       }
 
       loginHandler(responseData.token);
+      if (responseData.isAdmin) {
+        adminLogin();
+      }
     } catch (e) {
       console.log("네트워크 오류 혹은 다른 예상 밖 오류.");
       console.log(e);
@@ -72,4 +77,4 @@ const useForm = (loginHandler) => {
   };
 };
 
-export default useForm;
+export default useAuthHttp;

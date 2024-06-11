@@ -15,7 +15,7 @@ const WriteBoardWordsProposalSelector = (props) => {
 
     const { fetchedData, isLoading } = useInfiniteScroll(
         6,
-        "dayCount",
+        "date",
         FETCH_URL,
         "write-board",
         scrollPosition,

@@ -1,6 +1,6 @@
 import validator from "../../../validation/validator";
 
-import useForm from "../../../hook/useForm";
+import useAuthHttp from "../../../hook/useAuthHttp";
 
 import { useContext } from "react";
 
@@ -17,7 +17,7 @@ const Login = (props) => {
         formErrorMessage,
         formStateUpdateHandler,
         submitHandler,
-    } = useForm(login);
+    } = useAuthHttp(login);
 
     return (
         <section className="auth-board-container">

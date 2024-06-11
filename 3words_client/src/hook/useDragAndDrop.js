@@ -3,6 +3,7 @@ import deepCopyObj from "../util/deepCopyObj";
 import { useState, useEffect, useContext } from "react";
 
 import AuthContext from "../store/AuthContext";
+import { SERVER_HOST } from "../consts/server";
 
 const useDragAndDrop = (wordsProposalId) => {
   const [writing, setWriting] = useState({
@@ -19,13 +20,11 @@ const useDragAndDrop = (wordsProposalId) => {
   useEffect(() => {
     const fetchWriting = async () => {
       setIsLoading(true);
-      const response = await fetch(
-        import.meta.env.VITE_SERVER_HOST + "/write/" + wordsProposalId,
-        {
-          method: "GET",
-          headers: { Authorization: "Bearer " + token },
-        }
-      );
+
+      const response = await fetch(SERVER_HOST + "/write/" + wordsProposalId, {
+        method: "GET",
+        headers: { Authorization: "Bearer " + token },
+      });
       const responseData = await response.json();
 
       setWriting({
