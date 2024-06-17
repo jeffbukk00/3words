@@ -375,7 +375,35 @@ button:disabled {
 }
 
 /* help board */
+.help-board {
+  margin: 10rem;
+}
 
+.help-board-header {
+  margin-bottom: 5.6rem;
+}
+.help-board-header h2 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
+
+.help-board-header p {
+  font-size: 2rem;
+  color: #ccc;
+}
+
+.help-board-body {
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.help-board-body div:nth-child(1) {
+}
 /* card */
 .card {
   display: grid;
