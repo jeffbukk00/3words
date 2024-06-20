@@ -5,7 +5,7 @@
 
 ## Description
 
-https://portfolio-jeffbukk00.vercel.app/project/3words
+🔗: https://portfolio-jeffbukk00.vercel.app/project/3words
 
 "3words"는 제시되는 3가지 단어들을 소재로, 유저들이 자유로운 상상을 통해 이야기를 지어내는 어플리케이션입니다. 자극적이고 반복되는 콘텐츠가 지배하는 요즘, 상상력이 결여될 때가 많습니다. "3words" 안에서 잃어버린 상상의 자유를 되찾아보세요.😃
 
