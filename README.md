@@ -1,62 +1,31 @@
-# Project Title
+# 3words
 
-Simple overview of use/purpose.
+3단어로 하는 상상, "3words"입니다.
+
 
 ## Description
 
-An in-depth paragraph about your project and overview of use.
+https://portfolio-jeffbukk00.vercel.app/project/3words
 
-## Getting Started
+"3words"는 제시되는 3가지 단어들을 소재로, 유저들이 자유로운 상상을 통해 이야기를 지어내는 어플리케이션입니다. 자극적이고 반복되는 콘텐츠가 지배하는 요즘, 상상력이 결여될 때가 많습니다. "3words" 안에서 잃어버린 상상의 자유를 되찾아보세요.😃
 
-### Dependencies
 
-* Describe any prerequisites, libraries, OS version, etc., needed before installing program.
-* ex. Windows 10
+## Service URL
+🔗: https://www.3words.today/
 
-### Installing
 
-* How/where to download your program
-* Any modifications needed to be made to files/folders
+## Dependencies
 
-### Executing program
-
-* How to run the program
-* Step-by-step bullets
-```
-code blocks for commands
-```
-
-## Help
-
-Any advise for common problems or issues.
-```
-command to run if program contains helper info
-```
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
+![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
 
 ## Authors
 
-Contributors names and contact info
+[@jeffbukk00 - Github](https://github.com/jeffbukk00)
 
-ex. Dominique Pizzie  
-ex. [@DomPizzie](https://twitter.com/dompizzie)
-
-## Version History
-
-* 0.2
-    * Various bug fixes and optimizations
-    * See [commit change]() or See [release history]()
-* 0.1
-    * Initial Release
+[@jeffbukk00 - Website](https://portfolio-jeffbukk00.vercel.app/main/about-me)
 
 ## License
 
-This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
-
-## Acknowledgments
-
-Inspiration, code snippets, etc.
-* [awesome-readme](https://github.com/matiassingers/awesome-readme)
-* [PurpleBooth](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
-* [dbader](https://github.com/dbader/readme-template)
-* [zenorocha](https://gist.github.com/zenorocha/4526327)
-* [fvcproductions](https://gist.github.com/fvcproductions/1bfc2d4aecb01a834b46)
+This project is licensed under the [jeffbukk00] License.
